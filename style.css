@@ -26,6 +26,8 @@ nav{
     background-color: rgb(3, 69, 88);
     opacity: 0.9;
     z-index: 999;
+    position: fixed;
+    width: 100%;
 }
 
 .logo{
@@ -59,13 +61,6 @@ nav{
     transition: all 0.4s ease-out;
 }
 
-/* .nav-links li:hover .sub-menu1{
-    display: block;
-    position: absolute;
-    background-color: #ccc;
-    margin-top:15px;
-} */
-
 .burger{
     display: none;
     cursor: pointer;
@@ -84,7 +79,7 @@ nav{
     .nav-links{
         width: 60%;
     }
-}
+}   
 
 @media screen and (max-width:768px){
     body{
@@ -193,69 +188,147 @@ nav{
 }
 
 /* opening times=============================*/
-
-.openings-times{
-    height: 600px;
+.opening-container{
     width: 100%;
     background-color: #cba15c;
-    padding-right: 800px;
-    font-size: 1.2rem;
+}
+
+.opening-times{
+    margin-right: 800px;
+    font-size: 1.5rem;
     text-align: center;
+    padding: 75px;
 } 
 
 .times{
     text-align: center;
 } 
 
+@media screen and (max-width:1024px){
+    .opening-times{
+        margin-right:200px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .opening-times{
+        margin-right:0;
+    }
+}
+
 /* Picture slider=====================*/
  .slider-frame{
-  max-width:100%;
-  /* margin: auto; */
+ margin-top: 101px;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .slider-images{
-    display: flex;
-    flex-wrap: nowrap;
-    max-height: 1000px;
+ display: none;
 }
 
 img{
-    width:100%;
+    width: 100%;
 }
 
-#prevBtn{
+.numbertext{
+    display: none;
+}
+
+
+.prev, .next {
+    cursor: pointer;
     position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+.prev{
+    left:0;
+    border-radius: 3px 0 0 3px;
+}
+    /*
+     position: absolute;
     top: 50%;
     z-index: 100;
     left: 5%;
     font-size: 30px;
     color: white;
-    cursor: pointer;
-}
+    cursor: pointer; 
+ } */
 
-#nextBtn{
-    position: absolute;
+.next{
+    right:0;
+    border-radius: 3px 0 0 3px;
+    /* position: absolute;
     top: 50%;
     z-index: 100;
     right: 5%;
     font-size: 30px;
     color: white;
-    cursor: pointer;
+    cursor: pointer; */
 }
+
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    display: none;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 /*video==========================================*/
 
 .video-container{
     max-width: 100%;
     background-color: black;
-    height: 900px;
+    height: 1000px;
 
 }
 
 iframe{
     width:100%; 
-    height:900px; 
+    height:1000px; 
     border:1px solid black;
 }
 
@@ -340,12 +413,13 @@ input[type=submit]:hover {
     justify-content: space-between;
     margin: 23px;
     border: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .textbox-container{
     display:flex;
     /* background-color: blue; */
-    height: 550px;
+    
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
@@ -353,7 +427,6 @@ input[type=submit]:hover {
 
 .textbox{
     width: 400px;
-    height:500px;
     background-color: #ffffff;
     font-size: larger;
     margin: 25px;
@@ -361,7 +434,7 @@ input[type=submit]:hover {
 
 /* book */
 .header{
-    padding: 30px;
+    padding: 100px;
     font-size: 30px;
 }
 
