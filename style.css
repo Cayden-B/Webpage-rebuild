@@ -218,7 +218,6 @@ nav{
 
 /* Picture slider=====================*/
  .slider-frame{
- margin-top: 101px;
   max-width: 100%;
   overflow: hidden;
   position: relative;
@@ -322,13 +321,13 @@ img{
 .video-container{
     max-width: 100%;
     background-color: black;
-    height: 1000px;
+    height: 600px;
 
 }
 
 iframe{
     width:100%; 
-    height:1000px; 
+    height: 600px;
     border:1px solid black;
 }
 
@@ -349,11 +348,6 @@ iframe{
     flex-direction: row;
 }
 
-.contact-textbox{
-    /* background-color: rgb(255, 255, 255); */
-    
-    
-}
 .contact-textbox, h3{
     margin:10px;
 }
@@ -483,17 +477,18 @@ input[type=submit]:hover {
     background-color: rgb(255, 255, 255);
     display: flex;
     /* width: 1000px; */
-    margin-bottom: 50px;
+    
     margin: 50px;
 }
 
 .news-imgbox{
     background-color: black;
     width: 50%;
+
 }
 .news-textbox{
     background-color: rgb(255, 255, 255);
-    width: 50%;
     text-align: left;
     margin: 30px;
+    width:50%
 }
