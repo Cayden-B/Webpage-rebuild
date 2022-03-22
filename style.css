@@ -194,7 +194,7 @@ nav{
 }
 
 .opening-times{
-    margin-right: 800px;
+  
     font-size: 1.5rem;
     text-align: center;
     padding: 75px;
@@ -351,8 +351,6 @@ iframe{
 
 .contact-textbox{
     /* background-color: rgb(255, 255, 255); */
-    margin: 30px;
-    height: 400px;
     
     
 }
@@ -407,6 +405,7 @@ input[type=submit]:hover {
     width: 100%;
 }
 
+
 .menuBtn{
     height: 200px;
     width: 200px;
@@ -419,14 +418,25 @@ input[type=submit]:hover {
 .textbox-container{
     display:flex;
     /* background-color: blue; */
-    
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
 }
 
+@media screen and (max-width:768px){
+    .textbox-container{
+        flex-wrap: wrap;
+    }
+    .button-container{
+        flex-wrap: wrap;
+    }
+    .menuBtn{
+        height: 100px;
+        width: 100px;
+    }
+}
+
 .textbox{
-    width: 400px;
     background-color: #ffffff;
     font-size: larger;
     margin: 25px;
@@ -449,9 +459,8 @@ input[type=submit]:hover {
 .polite{
     background-color: #ffffff;
     height: 200px;
-    width: 800px;
     border: rgb(201, 199, 199) solid 3px;
-    margin: 80px;
+    margin: 30px;
  
 }
 .polite-header{
@@ -470,13 +479,14 @@ input[type=submit]:hover {
     flex-direction: column;
 }
 .newsbox{
-    height: 500px;
+    /* height: 500px; */
     background-color: rgb(255, 255, 255);
     display: flex;
-    width: 1000px;
+    /* width: 1000px; */
     margin-bottom: 50px;
-    
+    margin: 50px;
 }
+
 .news-imgbox{
     background-color: black;
     width: 50%;
